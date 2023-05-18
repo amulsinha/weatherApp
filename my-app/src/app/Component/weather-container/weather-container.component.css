@@ -1,8 +1,4 @@
-.weather-container {
-  width: 50%;
-  background: #fff;
-  height: 70%;
-}
+
 .temprature-container {
   display: flex;
   justify-content: center;

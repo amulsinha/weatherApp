@@ -1,0 +1,15 @@
+<div class="weatherforecaste-container" *ngIf="weatherDataForcaste">
+       <h1>8 Days Forecast for {{weatherDataForcaste.city.name}}</h1>
+    
+        <!-- <li *ngFor="let day of forecast">{{ day.temp.day }}°C</li> -->
+        <!-- <li>Sun Jul 21 2024 </li> -->
+        <table class="table-forecaste">
+            <tr *ngFor="let row of weatherDataForcaste.list">
+                <td class="date">{{row.dt_txt | date :'fullDate' }}</td>
+                <td class="temprature" [ngStyle]="{'color': 15 > 15 ? 'red' : 'blue'}">{{41| number:'1.0-0'}}°C/{{32| number:'1.0-0'}}°C</td>
+                <td class="weather">Clear sky</td>
+            </tr>
+        </table>
+      <!-- </ul> -->
+
+</div>

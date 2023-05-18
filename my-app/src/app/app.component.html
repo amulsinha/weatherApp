@@ -1,7 +1,23 @@
 <div class="main-wrapper">
   <div class="container">
     <app-search (inputText)="onInputReceived($event)"></app-search>
-    <app-weather-container [weatherData]="weatherData"></app-weather-container>
+
+      <ng-container  *ngIf="!showError else emptyList">
+        <div class="parent">
+          <div class="child1">
+            <app-weather-container [weatherData]="weatherData"></app-weather-container>
+          </div>
+          <div class="child2">
+            <app-weather-forecaste [weatherDataForcaste] = "weatherDataForcaste"></app-weather-forecaste>
+          </div>
+        </div>
+      </ng-container>
+     
+
+    
+      <ng-template #emptyList>
+      <p>{{errorMessage}}</p>
+      </ng-template >
   </div>
 </div>
 

@@ -1,6 +1,7 @@
 export const environment = {
     production:false,
     weatherUrl:"https://api.openweathermap.org/data/2.5/weather",
+    weatherForecastUrl:"https://api.openweathermap.org/data/2.5/forecast",
     headerName:'Content-Type',
     headerValue:"application/json",
     keyName:"appid",
