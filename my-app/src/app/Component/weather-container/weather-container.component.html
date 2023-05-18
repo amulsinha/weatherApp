@@ -1,0 +1,14 @@
+<div class="weather-container" *ngIf = "weatherData">
+    <div class="text-container">
+        <div class="temprature-container">
+            <div class="location">{{weatherData.name}} <span style="font-size:12px">{{weatherData.sys.country}}</span></div>
+            <div class="temprature" [ngStyle]="{'color': weatherData.main.temp > 15 ? 'red' : 'blue'}">
+                {{weatherData.main.temp | number:'1.0-0'}}°C
+            </div>
+            <div class="info-text">
+                Feels Like {{weatherData.main.feels_like | number:'1.0-0'}}°C
+            </div>
+        </div>
+    </div>
+
+</div>

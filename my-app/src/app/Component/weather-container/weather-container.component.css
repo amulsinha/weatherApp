@@ -1,0 +1,17 @@
+.weather-container {
+  width: 50%;
+  background: #fff;
+  height: 70%;
+}
+.temprature-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.temprature-container .location{
+    font-size: 36px;
+}
+.temprature-container .temprature{
+    font-size: 18px;
+}
